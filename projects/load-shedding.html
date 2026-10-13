@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Load Shedding &amp; Power Management System — Md Amran Ahmad</title>
+        <meta
+            name="description"
+            content="Full-stack electricity distribution platform: planned load-shedding schedules, outage dispatch, and bKash prepaid recharge. Express 5, Prisma 7, PostgreSQL, Redis, Next.js."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+    <body class="project-page">
+        <nav class="nav">
+            <div class="nav-inner">
+                <a href="../index.html#home" class="nav-logo"
+                    ><span class="dot"></span>Amran Ahmad</a
+                >
+                <div class="nav-links">
+                    <a href="../index.html#work">Projects</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../index.html#stack">Stack</a>
+                    <a href="../index.html#contact">Contact</a>
+                    <a href="../index.html#contact" class="nav-cta">Hire me</a>
+                </div>
+                <button
+                    class="nav-toggle"
+                    id="navToggle"
+                    aria-label="Toggle menu"
+                    aria-expanded="false"
+                >
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+            <div class="nav-mobile" id="navMobile">
+                <a href="../index.html#work">Projects</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#stack">Stack</a>
+                <a href="../index.html#contact">Contact</a>
+                <a href="../index.html#contact" class="nav-cta">Hire me</a>
+            </div>
+        </nav>
+
+        <header class="project-hero">
+            <div class="wrap">
+                <a class="back-link mono" href="../index.html#work"
+                    >← All projects</a
+                >
+                <div class="project-hero-grid">
+                    <div>
+                        <span class="section-tag mono"
+                            >Full-stack case study</span
+                        >
+                        <h1>Load Shedding &amp; Power Management System</h1>
+                        <p class="project-hero-sub">
+                            A full-stack platform that models an electricity
+                            distribution hierarchy — planned load-shedding
+                            schedules, unexpected outage dispatch, and prepaid
+                            token recharge through bKash.
+                        </p>
+                        <div class="tag-row">
+                            <span class="tag">Express 5</span
+                            ><span class="tag">TypeScript</span
+                            ><span class="tag">Prisma 7</span
+                            ><span class="tag">PostgreSQL</span
+                            ><span class="tag">Redis</span
+                            ><span class="tag">Zod</span
+                            ><span class="tag">bKash</span
+                            ><span class="tag">Next.js</span>
+                        </div>
+                        <div class="project-actions">
+                            <a
+                                class="btn btn-primary"
+                                href="https://loadshedding-and-power-management-s.vercel.app/"
+                                target="_blank"
+                                rel="noopener"
+                                >Live demo ↗</a
+                            >
+                            <a
+                                class="btn btn-ghost"
+                                href="https://github.com/mdamranahmad/phl2b7a7-loadshedding-and-power-management-system"
+                                target="_blank"
+                                rel="noopener"
+                                >Client repository ↗</a
+                            >
+                        </div>
+                    </div>
+                    <figure class="project-hero-media">
+                        <img
+                            src="../assets/projects/load-shedding.svg"
+                            alt="Load Shedding and Power Management System dashboard preview"
+                        />
+                    </figure>
+                </div>
+            </div>
+        </header>
+
+        <section class="project-detail">
+            <div class="wrap project-detail-wrap">
+                <div class="project-main">
+                    <article class="project-block reveal">
+                        <h2>Overview</h2>
+                        <p>
+                            The system models power distribution the way it
+                            actually flows — <strong>Zone → Substation → Feeder
+                            → Area → House</strong> — and gives each of the four
+                            roles that touch it a different job: customers,
+                            technicians, substation managers, and zone managers.
+                        </p>
+                        <p>
+                            It keeps <strong>planned load shedding</strong> and
+                            <strong>unexpected outages</strong> separate.
+                            Schedules are batch-generated and published against
+                            allocated kW, while outages are customer-reported,
+                            triaged, and dispatched to a technician — with zone
+                            managers able to review escalated reports.
+                        </p>
+                        <p>
+                            On top of that sits a prepaid token recharge flow
+                            with a real <strong>bKash tokenized checkout</strong>
+                            behind it. The backend is a Node.js + Express 5 REST
+                            API on PostgreSQL through Prisma 7, with Redis
+                            holding short-lived state such as OTPs and bKash
+                            tokens. A Next.js frontend consumes the API.
+                        </p>
+                    </article>
+
+                    <article class="project-block reveal">
+                        <h2>Main technology stack</h2>
+                        <dl class="stack-grid">
+                            <div class="stack-item">
+                                <dt>Runtime &amp; framework</dt>
+                                <dd>Node.js · Express 5 · TypeScript</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Database &amp; ORM</dt>
+                                <dd>PostgreSQL · Prisma 7</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Cache / temp state</dt>
+                                <dd>Redis (OTPs, bKash tokens)</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Validation</dt>
+                                <dd>Zod</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Auth</dt>
+                                <dd>JWT access + refresh · httpOnly cookies</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Payments</dt>
+                                <dd>bKash tokenized checkout</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Email</dt>
+                                <dd>Nodemailer + EJS templates</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Files</dt>
+                                <dd>Multer + Cloudinary</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Frontend</dt>
+                                <dd>Next.js</dd>
+                            </div>
+                        </dl>
+                    </article>
+
+                    <article class="project-block reveal">
+                        <h2>Key features</h2>
+                        <ul class="feature-list">
+                            <li>
+                                Four-role access control (CUSTOMER, TECHNICIAN,
+                                SUBSTATION_MANAGER, ZONE_MANAGER) enforced by a
+                                role-aware <code>auth()</code> middleware.
+                            </li>
+                            <li>
+                                The middleware re-validates the user's live
+                                status in the database on every request —
+                                blocked, soft-deleted, or unverified users are
+                                rejected.
+                            </li>
+                            <li>
+                                Batch generation and publishing of load-shedding
+                                schedules against allocated kW.
+                            </li>
+                            <li>
+                                Outage reporting → substation-manager triage →
+                                technician assignment → resolution, with
+                                zone-manager escalation review.
+                            </li>
+                            <li>
+                                Prepaid token recharge initiated and confirmed
+                                through a bKash callback, then recorded as a
+                                payment.
+                            </li>
+                            <li>
+                                Role-specific analytics and reporting endpoints.
+                            </li>
+                            <li>
+                                Modular Prisma schema — one <code>.prisma</code>
+                                file per domain model — kept readable and easy
+                                to review.
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="project-block reveal">
+                        <h2>Challenges faced</h2>
+                        <ul class="challenge-list">
+                            <li>
+                                <h4>Preventing double-assignment</h4>
+                                <p>
+                                    Two outage reports could be dispatched to
+                                    the same technician at almost the same time.
+                                    I wrapped the assignment flow in
+                                    <code>prisma.$transaction()</code> so it
+                                    either fully succeeds or cleanly fails.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Keeping dispatch queries fast</h4>
+                                <p>
+                                    As outage data grows, the triage list slows
+                                    down. Composite indexes on
+                                    <code>[reportStatus, isAssigned]</code> and
+                                    <code>[zoneId, subStationId, areaId]</code>
+                                    keep the hot queries responsive.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Too many round-trips to bKash</h4>
+                                <p>
+                                    Re-authenticating with the gateway on every
+                                    call was wasteful, so the bKash ID and
+                                    refresh tokens are cached in Redis with
+                                    TTLs.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>OTP verification without a session</h4>
+                                <p>
+                                    During email verification there is no logged
+                                    in user yet. I stored the OTP and the pending
+                                    registration payload in Redis with an expiry
+                                    instead of inventing a half-created row.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Keeping a big relational domain legible</h4>
+                                <p>
+                                    The schema touches 16 models. Splitting it
+                                    into one file per model and standardising
+                                    success/error responses kept the codebase
+                                    navigable.
+                                </p>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="project-block reveal">
+                        <h2>Potential improvements &amp; future plans</h2>
+                        <ul class="improve-list">
+                            <li>
+                                Add a dedicated ADMIN role and an audit log
+                                model for critical actions such as approvals and
+                                status changes.
+                            </li>
+                            <li>
+                                Add global rate limiting and Helmet security
+                                headers.
+                            </li>
+                            <li>
+                                Add a <code>POST /auth/logout</code> endpoint and
+                                profile update endpoints
+                                (<code>PATCH /users/me</code>).
+                            </li>
+                            <li>
+                                Return structured field-level validation errors
+                                (an <code>errors: []</code> array) instead of a
+                                single message string.
+                            </li>
+                            <li>
+                                Use Redis to cache expensive read queries
+                                (schedules, analytics) as well as short-lived
+                                state.
+                            </li>
+                            <li>
+                                Make the zonal-manager approval route a
+                                <code>PATCH</code> for consistency with the
+                                substation-manager equivalent.
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+
+                <aside class="project-aside">
+                    <div class="aside-card">
+                        <h3>Project links</h3>
+                        <a
+                            href="https://loadshedding-and-power-management-s.vercel.app/"
+                            target="_blank"
+                            rel="noopener"
+                            >Live demo <span>↗</span></a
+                        >
+                        <a
+                            href="https://github.com/mdamranahmad/phl2b7a7-loadshedding-and-power-management-system"
+                            target="_blank"
+                            rel="noopener"
+                            >Client repository (frontend) <span>↗</span></a
+                        >
+                        <a
+                            href="https://github.com/mdamranahmad/phl2b7m43a6-loadshedding-and-power-management-backend"
+                            target="_blank"
+                            rel="noopener"
+                            >Backend repository <span>↗</span></a
+                        >
+                        <a
+                            href="https://phl2b7m43a6-loadshedding-and-power.vercel.app/"
+                            target="_blank"
+                            rel="noopener"
+                            >Live API <span>↗</span></a
+                        >
+                    </div>
+                    <div class="aside-card">
+                        <h3>Details</h3>
+                        <dl class="aside-dl">
+                            <div>
+                                <dt>Role</dt>
+                                <dd>Full-stack (API + Next.js frontend)</dd>
+                            </div>
+                            <div>
+                                <dt>Type</dt>
+                                <dd>Full-stack web application</dd>
+                            </div>
+                            <div>
+                                <dt>Status</dt>
+                                <dd>Shipped — live demo</dd>
+                            </div>
+                            <div>
+                                <dt>Roles modelled</dt>
+                                <dd>4 (customer → zone manager)</dd>
+                            </div>
+                            <div>
+                                <dt>Payments</dt>
+                                <dd>bKash tokenized checkout</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="wrap">
+                <nav class="project-pager">
+                    <a class="is-disabled" aria-disabled="true"
+                        >← Previous</a
+                    >
+                    <a href="../index.html#work">All projects</a>
+                    <a href="rentnest.html">Next: RentNest →</a>
+                </nav>
+            </div>
+        </section>
+
+        <section class="cta-band">
+            <div class="wrap cta-band-inner">
+                <div>
+                    <h2>Need a backend that holds up under real load?</h2>
+                    <p>
+                        Tell me what you're building and I'll reply honestly
+                        about fit and timeline.
+                    </p>
+                </div>
+                <a href="../index.html#contact" class="btn btn-primary"
+                    >Start a project</a
+                >
+            </div>
+        </section>
+
+        <a
+            href="../index.html#contact"
+            class="floating-cta show"
+            id="floatingCta"
+            >Hire me →</a
+        >
+
+        <footer>
+            <p>
+                © <span id="year"></span> Md Amran Ahmad. Backend-first,
+                schema-to-screen.
+            </p>
+        </footer>
+
+        <script src="../js/main.js"></script>
+    </body>
+</html>

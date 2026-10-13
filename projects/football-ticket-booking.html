@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Football Ticket Booking System — Md Amran Ahmad</title>
+        <meta
+            name="description"
+            content="ERD-first relational database design and analytical SQL for a tournament-scale football ticketing platform: Users, Matches, and Bookings."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+    <body class="project-page">
+        <nav class="nav">
+            <div class="nav-inner">
+                <a href="../index.html#home" class="nav-logo"
+                    ><span class="dot"></span>Amran Ahmad</a
+                >
+                <div class="nav-links">
+                    <a href="../index.html#work">Projects</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../index.html#stack">Stack</a>
+                    <a href="../index.html#contact">Contact</a>
+                    <a href="../index.html#contact" class="nav-cta">Hire me</a>
+                </div>
+                <button
+                    class="nav-toggle"
+                    id="navToggle"
+                    aria-label="Toggle menu"
+                    aria-expanded="false"
+                >
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+            <div class="nav-mobile" id="navMobile">
+                <a href="../index.html#work">Projects</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#stack">Stack</a>
+                <a href="../index.html#contact">Contact</a>
+                <a href="../index.html#contact" class="nav-cta">Hire me</a>
+            </div>
+        </nav>
+
+        <header class="project-hero">
+            <div class="wrap">
+                <a class="back-link mono" href="../index.html#work"
+                    >← All projects</a
+                >
+                <div class="project-hero-grid">
+                    <div>
+                        <span class="section-tag mono">Database case study</span>
+                        <h1>Football Ticket Booking System</h1>
+                        <p class="project-hero-sub">
+                            An ERD-first relational schema and a suite of
+                            analytical SQL for tournament-scale ticketing —
+                            designed so a stadium seat can never be
+                            double-booked.
+                        </p>
+                        <div class="tag-row">
+                            <span class="tag">PostgreSQL</span
+                            ><span class="tag">SQL</span
+                            ><span class="tag">ERD Design</span
+                            ><span class="tag">TypeScript</span>
+                        </div>
+                        <div class="project-actions">
+                            <a
+                                class="btn btn-primary"
+                                href="https://github.com/mdamranahmad/PH-L2B7A3-Module17-Footbal-Ticket-Booking-System"
+                                target="_blank"
+                                rel="noopener"
+                                >GitHub repository ↗</a
+                            >
+                        </div>
+                    </div>
+                    <figure class="project-hero-media">
+                        <img
+                            src="../assets/projects/football-ticket-booking.svg"
+                            alt="Football ticket booking database preview"
+                        />
+                    </figure>
+                </div>
+            </div>
+        </header>
+
+        <section class="project-detail">
+            <div class="wrap project-detail-wrap">
+                <div class="project-main">
+                    <article class="project-block reveal">
+                        <h2>Overview</h2>
+                        <p>
+                            A relational database design and SQL implementation
+                            case study for a tournament-scale football ticketing
+                            platform. It models administrative and customer
+                            roles, upcoming match fixtures, and stadium seat
+                            reservations — then proves the design with a suite of
+                            analytical queries.
+                        </p>
+                        <p>
+                            The deliverable is an
+                            <strong>ERD-first schema</strong> (Users, Matches,
+                            Bookings) with explicit constraints, plus the SQL
+                            that answers real business questions against sample
+                            data.
+                        </p>
+                    </article>
+
+                    <article class="project-block reveal">
+                        <h2>Main technology stack</h2>
+                        <dl class="stack-grid">
+                            <div class="stack-item">
+                                <dt>Database</dt>
+                                <dd>PostgreSQL</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Query language</dt>
+                                <dd>SQL</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Modelling</dt>
+                                <dd>Entity-Relationship Diagram (Draw.io)</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Tooling</dt>
+                                <dd>TypeScript · Git</dd>
+                            </div>
+                        </dl>
+                    </article>
+
+                    <article class="project-block reveal">
+                        <h2>Key features</h2>
+                        <ul class="feature-list">
+                            <li>
+                                Three normalized tables with explicit primary and
+                                foreign keys.
+                            </li>
+                            <li>
+                                <strong>Users</strong> (Ticket Manager / Football
+                                Fan), <strong>Matches</strong> (fixtures,
+                                tournament category, status, base price), and
+                                <strong>Bookings</strong> — the transactional
+                                junction linking a fan to a match at seat level.
+                            </li>
+                            <li>
+                                Relationships: one fan → many bookings; one match
+                                → many bookings; and each booking row maps one
+                                user to one match for a specific seat.
+                            </li>
+                            <li>
+                                Match status (Available / Selling Fast / Sold Out
+                                / Postponed) and payment status (Pending /
+                                Confirmed / Cancelled / Refunded).
+                            </li>
+                            <li>
+                                A suite of queries covering joins, subqueries,
+                                aggregation, NULL handling, pattern matching, and
+                                offset pagination.
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="project-block reveal">
+                        <h2>Challenges faced</h2>
+                        <ul class="challenge-list">
+                            <li>
+                                <h4>Preventing a double-booked seat</h4>
+                                <p>
+                                    The whole point of the model is that a seat
+                                    can't be sold twice. That meant thinking
+                                    about constraints and the shape of the
+                                    Bookings table up front, not patching it
+                                    later.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Relationships that reflect reality</h4>
+                                <p>
+                                    Getting the cardinality right — one-to-many
+                                    for purchases, but a logical one-to-one for
+                                    seat allocation — required resisting the urge
+                                    to over-normalise.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>NULL handling and pagination</h4>
+                                <p>
+                                    Optional fields and paginated listings are
+                                    where naive SQL quietly breaks. Writing those
+                                    queries correctly and readably was a core
+                                    part of the exercise.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Keeping the ERD and the SQL in sync</h4>
+                                <p>
+                                    As the model evolved, the diagram and the
+                                    queries had to move together so they didn't
+                                    tell two different stories.
+                                </p>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="project-block reveal">
+                        <h2>Potential improvements &amp; future plans</h2>
+                        <ul class="improve-list">
+                            <li>
+                                A transactional booking flow (seat locking)
+                                exposed through an API.
+                            </li>
+                            <li>
+                                Payment gateway integration to match the
+                                <code>payment_status</code> field.
+                            </li>
+                            <li>
+                                Stored procedures or triggers to enforce seat
+                                allocation rules at the database layer.
+                            </li>
+                            <li>
+                                Indexes tuned to the hottest booking and search
+                                queries.
+                            </li>
+                            <li>
+                                Re-implement against a Prisma-backed API so the
+                                schema and the application share one source of
+                                truth.
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+
+                <aside class="project-aside">
+                    <div class="aside-card">
+                        <h3>Project links</h3>
+                        <a
+                            href="https://github.com/mdamranahmad/PH-L2B7A3-Module17-Footbal-Ticket-Booking-System"
+                            target="_blank"
+                            rel="noopener"
+                            >GitHub repository <span>↗</span></a
+                        >
+                        <p class="aside-note">
+                            This is a database design case study — there is no
+                            hosted demo. The schema, ERD, and SQL live in the
+                            repository above.
+                        </p>
+                    </div>
+                    <div class="aside-card">
+                        <h3>Details</h3>
+                        <dl class="aside-dl">
+                            <div>
+                                <dt>Role</dt>
+                                <dd>Database designer / SQL engineer</dd>
+                            </div>
+                            <div>
+                                <dt>Type</dt>
+                                <dd>Database design case study</dd>
+                            </div>
+                            <div>
+                                <dt>Status</dt>
+                                <dd>Source available</dd>
+                            </div>
+                            <div>
+                                <dt>Entities</dt>
+                                <dd>Users · Matches · Bookings</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="wrap">
+                <nav class="project-pager">
+                    <a href="salary-calculator.html"
+                        >← Previous: PayScale 2026</a
+                    >
+                    <a href="../index.html#work">All projects</a>
+                    <a href="devpulse.html">Next: DevPulse →</a>
+                </nav>
+            </div>
+        </section>
+
+        <section class="cta-band">
+            <div class="wrap cta-band-inner">
+                <div>
+                    <h2>Need a schema that won't let bad data in?</h2>
+                    <p>
+                        Constraints, keys, and relationships decided up front —
+                        the cheapest bug you'll ever prevent.
+                    </p>
+                </div>
+                <a href="../index.html#contact" class="btn btn-primary"
+                    >Start a project</a
+                >
+            </div>
+        </section>
+
+        <a
+            href="../index.html#contact"
+            class="floating-cta show"
+            id="floatingCta"
+            >Hire me →</a
+        >
+
+        <footer>
+            <p>
+                © <span id="year"></span> Md Amran Ahmad. Backend-first,
+                schema-to-screen.
+            </p>
+        </footer>
+
+        <script src="../js/main.js"></script>
+    </body>
+</html>

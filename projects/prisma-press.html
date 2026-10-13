@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Prisma Press — Md Amran Ahmad</title>
+        <meta
+            name="description"
+            content="Prisma Press: a publishing platform built backend-first with a written requirement analysis, a type-safe Prisma schema, a documented API contract, and a Next.js frontend."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+    <body class="project-page">
+        <nav class="nav">
+            <div class="nav-inner">
+                <a href="../index.html#home" class="nav-logo"
+                    ><span class="dot"></span>Amran Ahmad</a
+                >
+                <div class="nav-links">
+                    <a href="../index.html#work">Projects</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../index.html#stack">Stack</a>
+                    <a href="../index.html#contact">Contact</a>
+                    <a href="../index.html#contact" class="nav-cta">Hire me</a>
+                </div>
+                <button
+                    class="nav-toggle"
+                    id="navToggle"
+                    aria-label="Toggle menu"
+                    aria-expanded="false"
+                >
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+            <div class="nav-mobile" id="navMobile">
+                <a href="../index.html#work">Projects</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#stack">Stack</a>
+                <a href="../index.html#contact">Contact</a>
+                <a href="../index.html#contact" class="nav-cta">Hire me</a>
+            </div>
+        </nav>
+
+        <header class="project-hero">
+            <div class="wrap">
+                <a class="back-link mono" href="../index.html#work"
+                    >← All projects</a
+                >
+                <div class="project-hero-grid">
+                    <div>
+                        <span class="section-tag mono"
+                            >Full-stack case study</span
+                        >
+                        <h1>Prisma Press</h1>
+                        <p class="project-hero-sub">
+                            A publishing platform planned like a product —
+                            requirements first, then a type-safe schema and a
+                            testable API contract, with a Next.js frontend on top.
+                        </p>
+                        <div class="tag-row">
+                            <span class="tag">Next.js</span
+                            ><span class="tag">TypeScript</span
+                            ><span class="tag">Prisma</span
+                            ><span class="tag">PostgreSQL</span
+                            ><span class="tag">Postman</span>
+                        </div>
+                        <div class="project-actions">
+                            <a
+                                class="btn btn-primary"
+                                href="https://github.com/mdamranahmad/phl2b7m27-prisma-press-frontend"
+                                target="_blank"
+                                rel="noopener"
+                                >Client repository ↗</a
+                            >
+                            <a
+                                class="btn btn-ghost"
+                                href="https://github.com/mdamranahmad/PHL2B7M20-Prisma-Press"
+                                target="_blank"
+                                rel="noopener"
+                                >Backend repository ↗</a
+                            >
+                        </div>
+                    </div>
+                    <figure class="project-hero-media">
+                        <img
+                            src="../assets/projects/prisma-press.svg"
+                            alt="Prisma Press publishing platform preview"
+                        />
+                    </figure>
+                </div>
+            </div>
+        </header>
+
+        <section class="project-detail">
+            <div class="wrap project-detail-wrap">
+                <div class="project-main">
+                    <article class="project-block reveal">
+                        <h2>Overview</h2>
+                        <p>
+                            Prisma Press is a publishing platform built
+                            <strong>backend-first</strong>. Before any code, I
+                            wrote a backend requirement analysis that pinned down
+                            the models, roles, and endpoints.
+                        </p>
+                        <p>
+                            The schema then lived in <strong>Prisma</strong> for
+                            end-to-end type safety, and every endpoint was
+                            documented as a <strong>Postman collection</strong>
+                            so the API was a contract rather than a guess. A
+                            Next.js App Router frontend provides the
+                            authentication and blog pages that consume the API.
+                        </p>
+                        <p>
+                            The point of the project wasn't the feature list — it
+                            was the discipline: keeping the requirements doc, the
+                            Prisma schema, and the API tests traceable to the
+                            same source of truth, the way maintainable products
+                            are built.
+                        </p>
+                    </article>
+
+                    <article class="project-block reveal">
+                        <h2>Main technology stack</h2>
+                        <dl class="stack-grid">
+                            <div class="stack-item">
+                                <dt>Backend</dt>
+                                <dd>Node.js · Express · TypeScript</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>ORM &amp; database</dt>
+                                <dd>Prisma · PostgreSQL</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Frontend</dt>
+                                <dd>Next.js (App Router) · React · TypeScript</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>API contract</dt>
+                                <dd>Postman collection</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Planning</dt>
+                                <dd>Written requirement analysis</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Structure</dt>
+                                <dd>Separate backend &amp; frontend repos</dd>
+                            </div>
+                        </dl>
+                    </article>
+
+                    <article class="project-block reveal">
+                        <h2>Key features</h2>
+                        <ul class="feature-list">
+                            <li>
+                                A written requirement analysis committed
+                                alongside the code — the source of truth for
+                                models and endpoints.
+                            </li>
+                            <li>
+                                A Prisma schema providing type-safe queries
+                                across the backend.
+                            </li>
+                            <li>
+                                Authentication and content endpoints documented
+                                in a Postman collection.
+                            </li>
+                            <li>
+                                A Next.js App Router frontend with
+                                authentication and blog pages.
+                            </li>
+                            <li>
+                                A consistent response envelope across the API so
+                                the frontend never has to defensively parse.
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="project-block reveal">
+                        <h2>Challenges faced</h2>
+                        <ul class="challenge-list">
+                            <li>
+                                <h4>Agreeing on the model before writing code</h4>
+                                <p>
+                                    It's tempting to start with a screen and let
+                                    the data model emerge. Writing the
+                                    requirement analysis first meant the
+                                    frontend was never guessing what the API
+                                    returned.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Keeping three sources of truth aligned</h4>
+                                <p>
+                                    The requirement doc, the Prisma schema, and
+                                    the Postman tests all describe the same API.
+                                    Treating the schema as the anchor kept them
+                                    from drifting apart.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Predictable responses</h4>
+                                <p>
+                                    Every endpoint returns the same envelope
+                                    shape, so the frontend consumes responses
+                                    uniformly instead of branching per endpoint.
+                                </p>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="project-block reveal">
+                        <h2>Potential improvements &amp; future plans</h2>
+                        <ul class="improve-list">
+                            <li>
+                                A fuller editorial workflow: drafts, review, and
+                                scheduled publishing.
+                            </li>
+                            <li>
+                                Media uploads (for example Cloudinary) for cover
+                                images and inline images.
+                            </li>
+                            <li>Search, tagging, and pagination for posts.</li>
+                            <li>
+                                Role-based authoring (admin / author / reader)
+                                with permissions enforced on the API.
+                            </li>
+                            <li>
+                                Automated tests and CI, plus a one-command local
+                                setup.
+                            </li>
+                            <li>
+                                Deploy the frontend and API and link a public
+                                demo.
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+
+                <aside class="project-aside">
+                    <div class="aside-card">
+                        <h3>Project links</h3>
+                        <a
+                            href="https://github.com/mdamranahmad/phl2b7m27-prisma-press-frontend"
+                            target="_blank"
+                            rel="noopener"
+                            >Client repository (frontend) <span>↗</span></a
+                        >
+                        <a
+                            href="https://github.com/mdamranahmad/PHL2B7M20-Prisma-Press"
+                            target="_blank"
+                            rel="noopener"
+                            >Backend repository <span>↗</span></a
+                        >
+                        <p class="aside-note">
+                            No public live deployment yet — the source is
+                            available in the repositories above.
+                        </p>
+                    </div>
+                    <div class="aside-card">
+                        <h3>Details</h3>
+                        <dl class="aside-dl">
+                            <div>
+                                <dt>Role</dt>
+                                <dd>Backend + frontend</dd>
+                            </div>
+                            <div>
+                                <dt>Type</dt>
+                                <dd>Content / publishing platform</dd>
+                            </div>
+                            <div>
+                                <dt>Status</dt>
+                                <dd>Source available (backend + frontend)</dd>
+                            </div>
+                            <div>
+                                <dt>Docs</dt>
+                                <dd>Requirement analysis + Postman collection</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="wrap">
+                <nav class="project-pager">
+                    <a href="rentnest.html">← Previous: RentNest</a>
+                    <a href="../index.html#work">All projects</a>
+                    <a href="salary-calculator.html"
+                        >Next: PayScale 2026 →</a
+                    >
+                </nav>
+            </div>
+        </section>
+
+        <section class="cta-band">
+            <div class="wrap cta-band-inner">
+                <div>
+                    <h2>Want an API that's a contract, not a surprise?</h2>
+                    <p>
+                        Requirements, schema, and docs that agree with each
+                        other — that's the baseline.
+                    </p>
+                </div>
+                <a href="../index.html#contact" class="btn btn-primary"
+                    >Start a project</a
+                >
+            </div>
+        </section>
+
+        <a
+            href="../index.html#contact"
+            class="floating-cta show"
+            id="floatingCta"
+            >Hire me →</a
+        >
+
+        <footer>
+            <p>
+                © <span id="year"></span> Md Amran Ahmad. Backend-first,
+                schema-to-screen.
+            </p>
+        </footer>
+
+        <script src="../js/main.js"></script>
+    </body>
+</html>

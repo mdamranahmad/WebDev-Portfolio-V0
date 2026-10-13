@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PayScale 2026 Salary Calculator — Md Amran Ahmad</title>
+        <meta
+            name="description"
+            content="A single-file, client-side calculator for pay fixation, phased implementation, arrears, and gross salary under Bangladesh's National Pay Scale 2026."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+    <body class="project-page">
+        <nav class="nav">
+            <div class="nav-inner">
+                <a href="../index.html#home" class="nav-logo"
+                    ><span class="dot"></span>Amran Ahmad</a
+                >
+                <div class="nav-links">
+                    <a href="../index.html#work">Projects</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../index.html#stack">Stack</a>
+                    <a href="../index.html#contact">Contact</a>
+                    <a href="../index.html#contact" class="nav-cta">Hire me</a>
+                </div>
+                <button
+                    class="nav-toggle"
+                    id="navToggle"
+                    aria-label="Toggle menu"
+                    aria-expanded="false"
+                >
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+            <div class="nav-mobile" id="navMobile">
+                <a href="../index.html#work">Projects</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#stack">Stack</a>
+                <a href="../index.html#contact">Contact</a>
+                <a href="../index.html#contact" class="nav-cta">Hire me</a>
+            </div>
+        </nav>
+
+        <header class="project-hero">
+            <div class="wrap">
+                <a class="back-link mono" href="../index.html#work"
+                    >← All projects</a
+                >
+                <div class="project-hero-grid">
+                    <div>
+                        <span class="section-tag mono">Client-side utility</span>
+                        <h1>PayScale 2026 Salary Calculator</h1>
+                        <p class="project-hero-sub">
+                            A single self-contained file that calculates pay
+                            fixation, phased implementation, arrears, and gross
+                            salary under Bangladesh's National Pay Scale 2026 —
+                            entirely in the browser.
+                        </p>
+                        <div class="tag-row">
+                            <span class="tag">HTML</span
+                            ><span class="tag">CSS</span
+                            ><span class="tag">Vanilla JavaScript</span
+                            ><span class="tag">localStorage</span>
+                        </div>
+                        <div class="project-actions">
+                            <a
+                                class="btn btn-primary"
+                                href="https://mdamranahmad.github.io/Salary-Calculator-For-PayScale-2026/"
+                                target="_blank"
+                                rel="noopener"
+                                >Live tool ↗</a
+                            >
+                            <a
+                                class="btn btn-ghost"
+                                href="https://github.com/mdamranahmad/Salary-Calculator-For-PayScale-2026"
+                                target="_blank"
+                                rel="noopener"
+                                >GitHub repository ↗</a
+                            >
+                        </div>
+                    </div>
+                    <figure class="project-hero-media">
+                        <img
+                            src="../assets/projects/salary-calculator.svg"
+                            alt="PayScale 2026 salary calculator preview"
+                        />
+                    </figure>
+                </div>
+            </div>
+        </header>
+
+        <section class="project-detail">
+            <div class="wrap project-detail-wrap">
+                <div class="project-main">
+                    <article class="project-block reveal">
+                        <h2>Overview</h2>
+                        <p>
+                            A single self-contained HTML file that calculates pay
+                            fixation, phased implementation, arrears, and gross
+                            salary under Bangladesh's
+                            <strong>National Pay Scale 2026</strong>. Everything
+                            runs in the browser — no backend, no build step, and
+                            no network request. Open the file and it works.
+                        </p>
+                        <p>
+                            It's a real-world utility: government employees use
+                            it to sanity-check their own payslips, which raised
+                            the bar for accuracy, clarity, and honest labelling
+                            of what the tool can and can't guarantee.
+                        </p>
+                    </article>
+
+                    <article class="project-block reveal">
+                        <h2>Main technology stack</h2>
+                        <dl class="stack-grid">
+                            <div class="stack-item">
+                                <dt>Languages</dt>
+                                <dd>HTML · CSS · Vanilla JavaScript</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>State</dt>
+                                <dd>Browser localStorage (remembers inputs)</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Typography</dt>
+                                <dd>Bengali web fonts (Google Fonts)</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Delivery</dt>
+                                <dd>Single static file on GitHub Pages</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Dependencies</dt>
+                                <dd>None — no framework, no build tooling</dd>
+                            </div>
+                        </dl>
+                    </article>
+
+                    <article class="project-block reveal">
+                        <h2>Key features</h2>
+                        <ul class="feature-list">
+                            <li>
+                                Pay fixation (§3 &amp; §9) from the 2015 scale to
+                                the 2026 scale across grades 1–20, including the
+                                annual-increment case.
+                            </li>
+                            <li>
+                                Phased implementation schedule with different
+                                rates per grade band (40 / 70 / 100% and 50 / 75
+                                / 100%).
+                            </li>
+                            <li>
+                                Arrears (gross and net) computed on a
+                                month-and-day basis, adjusting for amounts
+                                already received under the 2024 incentive.
+                            </li>
+                            <li>
+                                Total gross salary with allowances (house rent,
+                                medical, mobile, tiffin) and GPF / other
+                                deductions.
+                            </li>
+                            <li>
+                                A full reference table for both the 2015 and 2026
+                                scales.
+                            </li>
+                            <li>
+                                Light/dark theme that follows the system setting,
+                                plus a responsive layout for mobile.
+                            </li>
+                            <li>Inputs persisted in localStorage.</li>
+                        </ul>
+                    </article>
+
+                    <article class="project-block reveal">
+                        <h2>Challenges faced</h2>
+                        <ul class="challenge-list">
+                            <li>
+                                <h4>Encoding a gazette-derived algorithm by hand</h4>
+                                <p>
+                                    Pay fixation is a multi-step calculation. In
+                                    pure JavaScript it's easy to accumulate
+                                    rounding drift, so the steps were kept
+                                    explicit and each rounding point made
+                                    deliberate.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Partial-month arrears</h4>
+                                <p>
+                                    Arrears run on a day basis, and the
+                                    adjustment for previously received incentive
+                                    money has to be subtracted correctly. Getting
+                                    the edge months right took the most testing.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Legible Bengali on small screens</h4>
+                                <p>
+                                    Numerals, tables, and dense labels had to
+                                    stay readable on phones without zooming,
+                                    which drove a lot of the layout decisions.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>One file, zero dependencies</h4>
+                                <p>
+                                    Keeping everything in a single maintainable
+                                    file — with no framework and no network calls
+                                    — meant organising the JS and CSS so it could
+                                    still be worked on later.
+                                </p>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="project-block reveal">
+                        <h2>Potential improvements &amp; future plans</h2>
+                        <ul class="improve-list">
+                            <li>
+                                Unit tests around the calculation engine with
+                                known-good fixtures.
+                            </li>
+                            <li>
+                                Export / print to PDF, and shareable calculation
+                                links.
+                            </li>
+                            <li>
+                                Support for additional scales and allowance
+                                rules as they're gazetted.
+                            </li>
+                            <li>
+                                Cross-check outputs against
+                                iBAS++ / payfixation.gov.bd and keep clearly
+                                labelling the tool as unofficial.
+                            </li>
+                            <li>
+                                PWA / offline support so it works without a
+                                connection.
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+
+                <aside class="project-aside">
+                    <div class="aside-card">
+                        <h3>Project links</h3>
+                        <a
+                            href="https://mdamranahmad.github.io/Salary-Calculator-For-PayScale-2026/"
+                            target="_blank"
+                            rel="noopener"
+                            >Live tool <span>↗</span></a
+                        >
+                        <a
+                            href="https://github.com/mdamranahmad/Salary-Calculator-For-PayScale-2026"
+                            target="_blank"
+                            rel="noopener"
+                            >GitHub repository <span>↗</span></a
+                        >
+                    </div>
+                    <div class="aside-card">
+                        <h3>Details</h3>
+                        <dl class="aside-dl">
+                            <div>
+                                <dt>Role</dt>
+                                <dd>Solo developer</dd>
+                            </div>
+                            <div>
+                                <dt>Type</dt>
+                                <dd>Client-side / offline utility</dd>
+                            </div>
+                            <div>
+                                <dt>Status</dt>
+                                <dd>Live — no signup required</dd>
+                            </div>
+                            <div>
+                                <dt>Stack</dt>
+                                <dd>HTML · CSS · Vanilla JavaScript</dd>
+                            </div>
+                            <div>
+                                <dt>Note</dt>
+                                <dd>
+                                    Unofficial helper — verify against iBAS++
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="wrap">
+                <nav class="project-pager">
+                    <a href="prisma-press.html">← Previous: Prisma Press</a>
+                    <a href="../index.html#work">All projects</a>
+                    <a href="football-ticket-booking.html"
+                        >Next: Football Ticket Booking →</a
+                    >
+                </nav>
+            </div>
+        </section>
+
+        <section class="cta-band">
+            <div class="wrap cta-band-inner">
+                <div>
+                    <h2>Need a focused tool that just works offline?</h2>
+                    <p>
+                        Small, dependency-free utilities can be surprisingly
+                        high-leverage.
+                    </p>
+                </div>
+                <a href="../index.html#contact" class="btn btn-primary"
+                    >Start a project</a
+                >
+            </div>
+        </section>
+
+        <a
+            href="../index.html#contact"
+            class="floating-cta show"
+            id="floatingCta"
+            >Hire me →</a
+        >
+
+        <footer>
+            <p>
+                © <span id="year"></span> Md Amran Ahmad. Backend-first,
+                schema-to-screen.
+            </p>
+        </footer>
+
+        <script src="../js/main.js"></script>
+    </body>
+</html>

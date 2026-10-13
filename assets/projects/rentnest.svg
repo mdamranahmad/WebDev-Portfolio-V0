@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="RentNest rental marketplace preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E8C82"/>
+      <stop offset="1" stop-color="#053B36"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6EE7B7"/>
+      <stop offset="1" stop-color="#10B981"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.06"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect width="800" height="500" fill="url(#grid)"/>
+
+  <rect x="52" y="56" width="696" height="388" rx="18" fill="#06413b" stroke="#ffffff" stroke-opacity="0.14"/>
+  <path d="M52 74a18 18 0 0 1 18-18h660a18 18 0 0 1 18 18v30H52z" fill="#0a544c"/>
+  <circle cx="84" cy="81" r="6" fill="#FF5F56"/>
+  <circle cx="104" cy="81" r="6" fill="#FFBD2E"/>
+  <circle cx="124" cy="81" r="6" fill="#27C93F"/>
+  <rect x="146" y="70" width="300" height="22" rx="11" fill="#06352f"/>
+  <text x="162" y="85" fill="#8FE3D6" font-family="Consolas, monospace" font-size="12">rentnest · find your next home</text>
+
+  <circle cx="196" cy="272" r="72" fill="url(#accent)"/>
+  <path d="M196 208 L254 264 H138 Z" fill="#063F3A"/>
+  <rect x="157" y="260" width="78" height="66" rx="4" fill="#063F3A"/>
+  <rect x="184" y="288" width="24" height="38" rx="3" fill="#A7F3D0"/>
+
+  <text x="312" y="246" fill="#FFFFFF" font-family="'Space Grotesk','Segoe UI',sans-serif" font-size="40" font-weight="700">RentNest</text>
+  <text x="312" y="282" fill="#A9E7DD" font-family="'Space Grotesk','Segoe UI',sans-serif" font-size="20" font-weight="600">Rental marketplace</text>
+  <text x="312" y="310" fill="#8FE3D6" font-family="Consolas, monospace" font-size="12.5">Next.js 16 · Express 5 · Prisma 7 · Stripe</text>
+
+  <g font-family="Consolas, monospace" font-size="11.5">
+    <rect x="312" y="338" width="112" height="30" rx="15" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.18"/>
+    <text x="332" y="357" fill="#EAFBF8">3 roles</text>
+    <rect x="436" y="338" width="112" height="30" rx="15" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.18"/>
+    <text x="456" y="357" fill="#EAFBF8">Stripe</text>
+    <rect x="560" y="338" width="146" height="30" rx="15" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.18"/>
+    <text x="580" y="357" fill="#EAFBF8">dashboards</text>
+  </g>
+</svg>

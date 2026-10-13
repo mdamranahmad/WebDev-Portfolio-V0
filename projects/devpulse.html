@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DevPulse — Issue &amp; Feature Tracker — Md Amran Ahmad</title>
+        <meta
+            name="description"
+            content="DevPulse: a role-gated issue and feature tracker built as an Express + TypeScript REST API on PostgreSQL with raw, parameterised SQL and JWT role-based access control."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+    <body class="project-page">
+        <nav class="nav">
+            <div class="nav-inner">
+                <a href="../index.html#home" class="nav-logo"
+                    ><span class="dot"></span>Amran Ahmad</a
+                >
+                <div class="nav-links">
+                    <a href="../index.html#work">Projects</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../index.html#stack">Stack</a>
+                    <a href="../index.html#contact">Contact</a>
+                    <a href="../index.html#contact" class="nav-cta">Hire me</a>
+                </div>
+                <button
+                    class="nav-toggle"
+                    id="navToggle"
+                    aria-label="Toggle menu"
+                    aria-expanded="false"
+                >
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+            <div class="nav-mobile" id="navMobile">
+                <a href="../index.html#work">Projects</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#stack">Stack</a>
+                <a href="../index.html#contact">Contact</a>
+                <a href="../index.html#contact" class="nav-cta">Hire me</a>
+            </div>
+        </nav>
+
+        <header class="project-hero">
+            <div class="wrap">
+                <a class="back-link mono" href="../index.html#work"
+                    >← All projects</a
+                >
+                <div class="project-hero-grid">
+                    <div>
+                        <span class="section-tag mono">Backend &amp; API</span>
+                        <h1>DevPulse — Issue &amp; Feature Tracker</h1>
+                        <p class="project-hero-sub">
+                            A role-gated internal tracker where contributors and
+                            maintainers file bugs and feature requests over an
+                            explicit, audit-friendly REST API built on raw SQL.
+                        </p>
+                        <div class="tag-row">
+                            <span class="tag">Node.js</span
+                            ><span class="tag">TypeScript</span
+                            ><span class="tag">Express</span
+                            ><span class="tag">PostgreSQL</span
+                            ><span class="tag">Raw SQL</span
+                            ><span class="tag">JWT / RBAC</span>
+                        </div>
+                        <div class="project-actions">
+                            <a
+                                class="btn btn-primary"
+                                href="https://b7a2-devpulse.vercel.app/"
+                                target="_blank"
+                                rel="noopener"
+                                >Live deployment ↗</a
+                            >
+                            <a
+                                class="btn btn-ghost"
+                                href="https://github.com/mdamranahmad/PH-L2B7-M10-A2-DevPulse"
+                                target="_blank"
+                                rel="noopener"
+                                >GitHub repository ↗</a
+                            >
+                        </div>
+                    </div>
+                    <figure class="project-hero-media">
+                        <img
+                            src="../assets/projects/devpulse.svg"
+                            alt="DevPulse issue tracker preview"
+                        />
+                    </figure>
+                </div>
+            </div>
+        </header>
+
+        <section class="project-detail">
+            <div class="wrap project-detail-wrap">
+                <div class="project-main">
+                    <article class="project-block reveal">
+                        <h2>Overview</h2>
+                        <p>
+                            DevPulse is a role-gated internal tracker where
+                            software teams report bugs and feature requests and
+                            coordinate their resolution. Two roles —
+                            <strong>Contributor</strong> and
+                            <strong>Maintainer</strong> — define who can create,
+                            update, and delete issues.
+                        </p>
+                        <p>
+                            The API is deliberately built on <strong>raw SQL</strong>
+                            through the <code>pg</code> pool rather than an ORM,
+                            so every query is explicit and easy to audit. Auth is
+                            a stateless JWT layer, and access is enforced
+                            per-role and per-owner on the server.
+                        </p>
+                    </article>
+
+                    <article class="project-block reveal">
+                        <h2>Main technology stack</h2>
+                        <dl class="stack-grid">
+                            <div class="stack-item">
+                                <dt>Runtime</dt>
+                                <dd>Node.js</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Language</dt>
+                                <dd>TypeScript</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Framework</dt>
+                                <dd>Express</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Database</dt>
+                                <dd>PostgreSQL (native pg driver, raw SQL)</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Auth</dt>
+                                <dd>JWT (jsonwebtoken) · bcrypt</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Access control</dt>
+                                <dd>Role-based (contributor / maintainer)</dd>
+                            </div>
+                        </dl>
+                    </article>
+
+                    <article class="project-block reveal">
+                        <h2>Key features</h2>
+                        <ul class="feature-list">
+                            <li>Signup and login returning a JWT.</li>
+                            <li>
+                                Role-based access control: contributors manage
+                                their own issues; maintainers can update any
+                                issue, change statuses independently, and delete
+                                issues.
+                            </li>
+                            <li>
+                                Issue types (<code>bug</code> /
+                                <code>feature_request</code>) and a workflow
+                                status (<code>open</code> /
+                                <code>in_progress</code> /
+                                <code>resolved</code>).
+                            </li>
+                            <li>
+                                A full REST surface — list, create, read, update,
+                                and delete issues — all JWT-protected.
+                            </li>
+                            <li>
+                                Consistent JSON requests and responses with a
+                                standard error shape.
+                            </li>
+                            <li>
+                                Database constraints: unique email, required
+                                fields, and a minimum description length.
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="project-block reveal">
+                        <h2>Challenges faced</h2>
+                        <ul class="challenge-list">
+                            <li>
+                                <h4>RBAC without an ORM's help</h4>
+                                <p>
+                                    With no ORM to lean on, every ownership and
+                                    role check is explicit, parameterised SQL. It
+                                    was more code, but each rule is visible and
+                                    testable.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Owner-only edits vs. maintainer overrides</h4>
+                                <p>
+                                    A contributor can only edit issues they
+                                    own, while a maintainer can edit anything.
+                                    Encoding that asymmetry cleanly in the
+                                    handlers — not scattered through the UI — was
+                                    the crux of the project.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Enumerated values and clear errors</h4>
+                                <p>
+                                    Issue type and status are fixed sets.
+                                    Validating them and returning a clear,
+                                    consistent error instead of a raw database
+                                    failure took care.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Staying injection-safe</h4>
+                                <p>
+                                    Writing raw SQL means every query must be
+                                    parameterised. Keeping that discipline across
+                                    the whole codebase was non-negotiable.
+                                </p>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="project-block reveal">
+                        <h2>Potential improvements &amp; future plans</h2>
+                        <ul class="improve-list">
+                            <li>
+                                Comments and an activity timeline per issue.
+                            </li>
+                            <li>Labels, assignees, and due dates.</li>
+                            <li>Pagination, sorting, and richer filtering.</li>
+                            <li>
+                                Email notifications on assignment and status
+                                change.
+                            </li>
+                            <li>
+                                Automated tests (integration against a test
+                                database) and CI.
+                            </li>
+                            <li>
+                                Migrate to Prisma for type safety while keeping
+                                the same API contract.
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+
+                <aside class="project-aside">
+                    <div class="aside-card">
+                        <h3>Project links</h3>
+                        <a
+                            href="https://b7a2-devpulse.vercel.app/"
+                            target="_blank"
+                            rel="noopener"
+                            >Live deployment <span>↗</span></a
+                        >
+                        <a
+                            href="https://github.com/mdamranahmad/PH-L2B7-M10-A2-DevPulse"
+                            target="_blank"
+                            rel="noopener"
+                            >GitHub repository <span>↗</span></a
+                        >
+                    </div>
+                    <div class="aside-card">
+                        <h3>Details</h3>
+                        <dl class="aside-dl">
+                            <div>
+                                <dt>Role</dt>
+                                <dd>Backend developer</dd>
+                            </div>
+                            <div>
+                                <dt>Type</dt>
+                                <dd>REST API / backend</dd>
+                            </div>
+                            <div>
+                                <dt>Status</dt>
+                                <dd>Shipped — live deployment</dd>
+                            </div>
+                            <div>
+                                <dt>Auth</dt>
+                                <dd>JWT + role-based access control</dd>
+                            </div>
+                            <div>
+                                <dt>Database</dt>
+                                <dd>PostgreSQL (raw, parameterised SQL)</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="wrap">
+                <nav class="project-pager">
+                    <a href="football-ticket-booking.html"
+                        >← Previous: Football Ticket Booking</a
+                    >
+                    <a href="../index.html#work">All projects</a>
+                    <a href="load-shedding.html">Next: Load Shedding →</a>
+                </nav>
+            </div>
+        </section>
+
+        <section class="cta-band">
+            <div class="wrap cta-band-inner">
+                <div>
+                    <h2>Need a clean, role-aware API?</h2>
+                    <p>
+                        Explicit endpoints, predictable errors, and access
+                        control enforced on the server.
+                    </p>
+                </div>
+                <a href="../index.html#contact" class="btn btn-primary"
+                    >Start a project</a
+                >
+            </div>
+        </section>
+
+        <a
+            href="../index.html#contact"
+            class="floating-cta show"
+            id="floatingCta"
+            >Hire me →</a
+        >
+
+        <footer>
+            <p>
+                © <span id="year"></span> Md Amran Ahmad. Backend-first,
+                schema-to-screen.
+            </p>
+        </footer>
+
+        <script src="../js/main.js"></script>
+    </body>
+</html>

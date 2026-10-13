@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>RentNest — Md Amran Ahmad</title>
+        <meta
+            name="description"
+            content="RentNest rental marketplace: rental-request lifecycle and Stripe Checkout on an Express 5 + Prisma 7 API, with a Next.js 16 frontend and role-based dashboards."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+    <body class="project-page">
+        <nav class="nav">
+            <div class="nav-inner">
+                <a href="../index.html#home" class="nav-logo"
+                    ><span class="dot"></span>Amran Ahmad</a
+                >
+                <div class="nav-links">
+                    <a href="../index.html#work">Projects</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../index.html#stack">Stack</a>
+                    <a href="../index.html#contact">Contact</a>
+                    <a href="../index.html#contact" class="nav-cta">Hire me</a>
+                </div>
+                <button
+                    class="nav-toggle"
+                    id="navToggle"
+                    aria-label="Toggle menu"
+                    aria-expanded="false"
+                >
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+            <div class="nav-mobile" id="navMobile">
+                <a href="../index.html#work">Projects</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#stack">Stack</a>
+                <a href="../index.html#contact">Contact</a>
+                <a href="../index.html#contact" class="nav-cta">Hire me</a>
+            </div>
+        </nav>
+
+        <header class="project-hero">
+            <div class="wrap">
+                <a class="back-link mono" href="../index.html#work"
+                    >← All projects</a
+                >
+                <div class="project-hero-grid">
+                    <div>
+                        <span class="section-tag mono"
+                            >Full-stack case study</span
+                        >
+                        <h1>RentNest</h1>
+                        <p class="project-hero-sub">
+                            A rental marketplace where tenants find and rent
+                            homes, landlords manage listings and requests, and
+                            admins moderate the platform — payments handled
+                            through Stripe.
+                        </p>
+                        <div class="tag-row">
+                            <span class="tag">Next.js 16</span
+                            ><span class="tag">Express 5</span
+                            ><span class="tag">Prisma 7</span
+                            ><span class="tag">PostgreSQL</span
+                            ><span class="tag">Stripe</span
+                            ><span class="tag">Tailwind 4</span
+                            ><span class="tag">shadcn/ui</span
+                            ><span class="tag">JWT</span>
+                        </div>
+                        <div class="project-actions">
+                            <a
+                                class="btn btn-primary"
+                                href="https://rentnest-zeta.vercel.app/"
+                                target="_blank"
+                                rel="noopener"
+                                >Live demo ↗</a
+                            >
+                            <a
+                                class="btn btn-ghost"
+                                href="https://github.com/mdamranahmad/phl2b7m33a05-rentnest-frontend"
+                                target="_blank"
+                                rel="noopener"
+                                >Client repository ↗</a
+                            >
+                        </div>
+                    </div>
+                    <figure class="project-hero-media">
+                        <img
+                            src="../assets/projects/rentnest.svg"
+                            alt="RentNest rental marketplace preview"
+                        />
+                    </figure>
+                </div>
+            </div>
+        </header>
+
+        <section class="project-detail">
+            <div class="wrap project-detail-wrap">
+                <div class="project-main">
+                    <article class="project-block reveal">
+                        <h2>Overview</h2>
+                        <p>
+                            RentNest is a rental marketplace for
+                            <strong>tenants, landlords, and admins</strong>.
+                            Tenants browse and rent listings and pay online;
+                            landlords list and manage properties and incoming
+                            rental requests; admins moderate users, properties,
+                            and categories across the platform.
+                        </p>
+                        <p>
+                            The backend is an Express 5 + Prisma 7 REST API on
+                            PostgreSQL. It owns the rental-request lifecycle and
+                            a <strong>Stripe subscription checkout with webhook
+                            handling</strong>. The frontend is a Next.js 16 App
+                            Router application with role-based dashboards and
+                            middleware-enforced route protection.
+                        </p>
+                        <p>
+                            The two halves are deliberately separate
+                            repositories: the API is a contract the frontend
+                            consumes, rather than a bundle it is welded to.
+                        </p>
+                    </article>
+
+                    <article class="project-block reveal">
+                        <h2>Main technology stack</h2>
+                        <dl class="stack-grid">
+                            <div class="stack-item">
+                                <dt>Frontend</dt>
+                                <dd>Next.js 16 (App Router, Server Actions)</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>UI &amp; styling</dt>
+                                <dd>Tailwind CSS 4 · shadcn/ui · framer-motion</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Backend</dt>
+                                <dd>Node.js · Express 5 · TypeScript</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Database &amp; ORM</dt>
+                                <dd>PostgreSQL · Prisma 7</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Auth</dt>
+                                <dd>JWT access + refresh · httpOnly cookies</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Payments</dt>
+                                <dd>Stripe Checkout Sessions + webhooks</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Notifications</dt>
+                                <dd>sonner toasts</dd>
+                            </div>
+                            <div class="stack-item">
+                                <dt>Deployment</dt>
+                                <dd>Vercel</dd>
+                            </div>
+                        </dl>
+                    </article>
+
+                    <article class="project-block reveal">
+                        <h2>Key features</h2>
+                        <ul class="feature-list">
+                            <li>
+                                Three roles — TENANT, LANDLORD, ADMIN — each with
+                                its own dashboard and navigation.
+                            </li>
+                            <li>
+                                Rental request lifecycle:
+                                <code>PENDING → PAYMENT_PENDING → APPROVED /
+                                REJECTED</code>, with the property's availability
+                                tracked in step
+                                (<code>Available → PENDING → WAITING →
+                                RENTED</code>).
+                            </li>
+                            <li>
+                                Stripe Checkout with signature-verified webhooks
+                                for <code>checkout.session.completed</code> and
+                                subscription updates or cancellations.
+                            </li>
+                            <li>
+                                Property search and filtering, reviews, and
+                                per-user rental and payment history.
+                            </li>
+                            <li>
+                                Route protection enforced server-side in Next.js
+                                middleware based on the JWT in an httpOnly
+                                cookie, with silent token refresh on expiry.
+                            </li>
+                            <li>
+                                A Postman collection documenting every endpoint.
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="project-block reveal">
+                        <h2>Challenges faced</h2>
+                        <ul class="challenge-list">
+                            <li>
+                                <h4>Stripe webhooks need the raw body</h4>
+                                <p>
+                                    Signature verification only works against
+                                    the untouched request payload, so
+                                    <code>/api/payment/webhook</code> is mounted
+                                    with <code>express.raw()</code> ahead of the
+                                    JSON body parser.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Two states that had to stay in sync</h4>
+                                <p>
+                                    The rental request and the property's
+                                    availability move together. Modelling both
+                                    as an explicit state machine — instead of
+                                    independent flags — removed a whole class of
+                                    inconsistent records.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Staying logged in without long-lived tokens</h4>
+                                <p>
+                                    Short access tokens kept things safe but
+                                    logged users out. Middleware now verifies the
+                                    token and silently refreshes it via
+                                    <code>refresh-login</code>, redirecting by
+                                    role when that fails.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Money must not double-fire</h4>
+                                <p>
+                                    Stripe retries webhooks. Handlers are made
+                                    idempotent and the payment is recorded before
+                                    the state changes, so a retry can't charge or
+                                    approve twice.
+                                </p>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="project-block reveal">
+                        <h2>Potential improvements &amp; future plans</h2>
+                        <ul class="improve-list">
+                            <li>
+                                Real-time notifications and tenant ↔ landlord
+                                messaging.
+                            </li>
+                            <li>
+                                Saved searches with email and in-app property
+                                alerts.
+                            </li>
+                            <li>Map-based search and richer filtering.</li>
+                            <li>
+                                Admin analytics dashboards (occupancy, revenue,
+                                request volume).
+                            </li>
+                            <li>
+                                Automated email receipts and renewal reminders.
+                            </li>
+                            <li>
+                                Automated tests — unit coverage for the API and
+                                an end-to-end test of the full checkout flow.
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+
+                <aside class="project-aside">
+                    <div class="aside-card">
+                        <h3>Project links</h3>
+                        <a
+                            href="https://rentnest-zeta.vercel.app/"
+                            target="_blank"
+                            rel="noopener"
+                            >Live demo <span>↗</span></a
+                        >
+                        <a
+                            href="https://github.com/mdamranahmad/phl2b7m33a05-rentnest-frontend"
+                            target="_blank"
+                            rel="noopener"
+                            >Client repository (frontend) <span>↗</span></a
+                        >
+                        <a
+                            href="https://github.com/mdamranahmad/PHL2B7M26A04-RentNest"
+                            target="_blank"
+                            rel="noopener"
+                            >Backend repository <span>↗</span></a
+                        >
+                    </div>
+                    <div class="aside-card">
+                        <h3>Details</h3>
+                        <dl class="aside-dl">
+                            <div>
+                                <dt>Role</dt>
+                                <dd>Full-stack (API + Next.js frontend)</dd>
+                            </div>
+                            <div>
+                                <dt>Type</dt>
+                                <dd>Marketplace web application</dd>
+                            </div>
+                            <div>
+                                <dt>Status</dt>
+                                <dd>Shipped — live demo</dd>
+                            </div>
+                            <div>
+                                <dt>Roles modelled</dt>
+                                <dd>3 (tenant, landlord, admin)</dd>
+                            </div>
+                            <div>
+                                <dt>Payments</dt>
+                                <dd>Stripe Checkout + webhooks</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="wrap">
+                <nav class="project-pager">
+                    <a href="load-shedding.html"
+                        >← Previous: Load Shedding</a
+                    >
+                    <a href="../index.html#work">All projects</a>
+                    <a href="prisma-press.html">Next: Prisma Press →</a>
+                </nav>
+            </div>
+        </section>
+
+        <section class="cta-band">
+            <div class="wrap cta-band-inner">
+                <div>
+                    <h2>Building a marketplace with real payments?</h2>
+                    <p>
+                        I can design the data model, the API, and the checkout
+                        flow end to end.
+                    </p>
+                </div>
+                <a href="../index.html#contact" class="btn btn-primary"
+                    >Start a project</a
+                >
+            </div>
+        </section>
+
+        <a
+            href="../index.html#contact"
+            class="floating-cta show"
+            id="floatingCta"
+            >Hire me →</a
+        >
+
+        <footer>
+            <p>
+                © <span id="year"></span> Md Amran Ahmad. Backend-first,
+                schema-to-screen.
+            </p>
+        </footer>
+
+        <script src="../js/main.js"></script>
+    </body>
+</html>
